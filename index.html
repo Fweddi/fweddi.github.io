@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+	<title>index.html</title>
+	<style> 	
+		.topnav {
+		  overflow: hidden;
+			background-color: #59022B;
+		}
+		.topnav a {
+		  float: right;
+		  text-align: center;
+		  padding: 14px 16px;
+		  font-size: 12px;
+			font-family: sans-serif;
+			color: white;
+		}
+		.nav-el {
+			width: 50px;
+			height: 50px;
+		}
+		#codewars:hover {
+			content: url("images/codewars2.png");
+		}
+		#codepen:hover {
+			content: url("images/codepen2.png");
+		}
+		#fcc:hover {
+			content: url("images/freecodecamp2.png");
+		}
+		#github:hover {
+			content: url("images/github2.png");
+		}
+		#intro-flex {
+			display: flex;
+			justify-content: space-around;
+			@media only screen and (max-width: 600px) {
+				flex-wrap: wrap; 
+				background-color: lightblue;
+			}
+		}
+		#intro-para {
+			height: 300px;
+			font-family: 'Major Mono Display', monospace;
+		}
+		#freddie {
+			padding: 10px;
+			height: 300px;
+		}
+		
+	</style>
+</head>
+
+<body>
+	
+<div class="topnav">
+  <a href="#codewars"><img class = "nav-el" id = "codewars" src = "images/codewars.png" alt = "Codewars"></a>
+  <a href="#codepen"><img class = "nav-el" id = "codepen" src = "images/codepen.png" alt = "Codepen"></a>
+	<a href="#fcc"><img id = "fcc" class = "nav-el" src = "images/freecodecamp.png" alt = "FreeCodeCamp"></a>
+	<a href="#github"><img id = "github" class = "nav-el" src = "images/github.png" alt = "GitHub"></a>
+</div>
+
+<div id = "intro-flex">
+	<img id = "freddie" width = 300px height = 300px src = "images/freddie.png" alt = "Picture of Freddie">
+	<p id = "intro-para"> "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+	</div>
+</body>
+</html>
