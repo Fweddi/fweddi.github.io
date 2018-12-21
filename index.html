@@ -1,22 +1,29 @@
 <!doctype html>
 <html>
-
+ <!-- Make navbar have its own padding - Yes? -->
+<!-- Make icons grow on mobile - Yes? -->
+<!-- Make navbar grow on mobile - Yes? -->
+	<!-- Copy in: and (max-device-width : 480px) --> 
 <head>
 	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
 	<title>index.html</title>
 	<style>
+		#blank {
+			height: 80px;
+		}
 		.topnav {
 		  	overflow: hidden;
 			background-color: #59022B;
 			display: flex;
 			justify-content: flex-end;
+			align-items: center;
 			position: fixed;
 			width: 100vw;
 			top: 0;
 			left: 0;
 			right: 0;
-			
+			height: 80px;
 		}
 		.topnav a {	
 		  text-align: center;
@@ -53,26 +60,34 @@
 			font-family: 'Major Mono Display', monospace;
 			display: block;
 			height: auto;
-			padding: 74px 0px 0px 0px;
+			padding: 10px;
 		}
 		#freddie {
-			padding: 84px 10px 10px 10px;
+			padding: 10px 10px 10px 10px;
 			height: 300px;
 			width: 300px;
 		}
+		
+		
 		@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-			#intro-flex {
-				flex-wrap: wrap;
+			#blank {
+				height: 10vw;
 			}
 			.topnav {
 				justify-content: space-around;
+				height: 10vw;
+			}
+			.nav-el {
+			width: 7vw;
+			height: 7vw;
+			}
+			#intro-flex {
+				flex-wrap: wrap;
 			}
 			#freddie {
 				width: 80vw;
 				height: 80vw;
-			}
-			#intro-para {
-				padding: 5px;
+				padding-bottom: 0px;
 			}
 		}
 	
@@ -81,7 +96,7 @@
 </head>
 
 <body>
-
+	<div id = "blank"> </div>
 <div class="topnav">
   <a href="#codewars"><img class = "nav-el" id = "codewars" src = "images/codewars.png" alt = "Codewars"></a>
   <a href="#codepen"><img class = "nav-el" id = "codepen" src = "images/codepen.png" alt = "Codepen"></a>
