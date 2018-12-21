@@ -6,10 +6,13 @@
 	<title>index.html</title>
 	<style>
 		.topnav {
-		  overflow: hidden;
+		  	overflow: hidden;
 			background-color: #59022B;
 			display: flex;
 			justify-content: flex-end;
+			position: fixed;
+			width: 100%;
+			top: 0;
 			
 		}
 		.topnav a {	
@@ -39,26 +42,31 @@
 			display: flex;
 			justify-content: space-around;
 		}
-		@media (max-width : 600px ){
-			#intro-flex {
-				flex-wrap: wrap;
-			}
-			.topnav {
-				justify-content: space-around;
-			}
-		}
 		#intro-para {
 			height: 300px;
 			font-family: 'Major Mono Display', monospace;
 			display: block;
 			height: auto;
 			max-width: 100%;
+			padding: 74px 0px 0px 0px;
 		}
 		#freddie {
-			padding: 10px;
+			padding: 84px 10px 0px 10px;
 			height: 300px;
 			width: 300px;
 		}
+		@media (max-width: 600px) {
+			#intro-flex {
+				flex-wrap: wrap;
+			}
+			.topnav {
+				justify-content: space-around;
+			}
+			#intro-para {
+				padding: 5px;
+			}
+		}
+	
 
 	</style>
 </head>
@@ -76,5 +84,6 @@
 	<img id = "freddie" width = "300px" height = "300px" src = "images/freddie.png" alt = "Picture of Freddie">
 	<p id = "intro-para"> "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
 	</div>
+
 </body>
 </html>
