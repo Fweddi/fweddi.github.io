@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
- <!-- Make image adjust along with text relative to viewport -->
-	<!-- Make photo and navbar in landscape mode take up less space -->
+<!-- Issue 1: image of me loads with no width - USE DOM .LOAD -->
+<!-- Issue 2: above a certain dimension (520x520, image increases in height but not width - FIXED -->
+<!-- Add landscape mode -->
 <head>
 	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
@@ -53,16 +54,23 @@
 			display: flex;
 			justify-content: space-around;
 			font-size: 2vw;
+			overflow: hidden;
 		}
 		#intro-para {
 			font-family: 'Major Mono Display', monospace;
 			font-size: 1em;
 			padding: 10px;
+			margin: 0px;
+			display: block;
 		}
 		#freddie {
 			padding: 10px 10px 10px 10px;
 			height: 20em;
 			width: 20em;
+			display: block;
+			max-width: 480px;
+			max-height: 480px;
+			visibility: hidden;
 		}
 		
 		
@@ -83,17 +91,15 @@
 			}
 			#intro-para {
 				font-size: 2.5em;
-				padding: 0px
+				padding: 0px;
 			}
 			#freddie {
 				width: 80vw;
 				height: 80vw;
-				padding-bottom: 0px;
+				padding-bottom: 20px;
 				padding-top: 20px;
 			}
 		}
-	
-
 	</style>
 </head>
 
@@ -110,6 +116,13 @@
 	<img id = "freddie" src = "images/freddie.png" alt = "Picture of Freddie">
 	<p id = "intro-para"> "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
 </div>
-
+	
+<script>
+	var picture = document.getElementById("freddie");
+  	window.addEventListener("load", function(event) {
+    picture.style.visibility = "visible";
+  });
+</script>	
+	
 </body>
 </html>
