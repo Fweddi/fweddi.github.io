@@ -94,8 +94,8 @@
 				padding: 0px;
 			}
 			#freddie {
-				width: 80vw;
-				height: 80vw;
+				width: 80vw !important;
+				height: 80vw !important;
 				padding-bottom: 20px;
 				padding-top: 20px;
 			}
@@ -113,14 +113,13 @@
 </div>
 
 <div id = "intro-flex">
-	<img id = "freddie" src = "images/freddie.png" alt = "Picture of Freddie">
+	<img id = "freddie" src = "images/freddie.png" height = "20em" width = "20em" alt = "Picture of Freddie">
 	<p id = "intro-para"> "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
 </div>
 	
 <script>
 	var picture = document.getElementById("freddie");
   		window.addEventListener("load", function(event) {
-	picture.style.width = "20em";
     picture.style.visibility = "visible";	
   });
 </script>	
