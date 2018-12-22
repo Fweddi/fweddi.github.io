@@ -56,21 +56,28 @@
 			font-size: 2vw;
 			overflow: hidden;
 		}
-		#freddie {
+		#freddie-flex {
 			padding: 10px 10px 10px 10px;
 			height: 20em;
 			width: 20em;
 			display: block;
 			max-width: 480px;
 			max-height: 480px;
-			visibility: hidden;
 		}
-		#intro-para {
+		#para-flex {
 			font-family: 'Major Mono Display', monospace;
 			font-size: 1em;
 			padding: 10px;
 			margin: 0px;
 			display: block;
+		}
+		#freddie {
+			height: 100%;
+			width: auto;
+		}
+		#intro-para {
+			height: 100%;
+			width: auto;
 		}
 		
 		
@@ -89,9 +96,9 @@
 			#intro-flex {
 				flex-wrap: wrap;
 			}
-			#freddie {
-				width: 80vw !important;
-				height: 80vw !important;
+			#freddie-flex {
+				width: 80vw;
+				height: 80vw;
 				padding-bottom: 20px;
 				padding-top: 20px;
 			}
@@ -113,16 +120,13 @@
 </div>
 
 <div id = "intro-flex">
-	<img id = "freddie" src = "images/freddie.png" height = "20em" width = "20em" alt = "Picture of Freddie">
-	<p id = "intro-para"> "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+	<div id = "freddie-flex"> 
+		<img id = "freddie" src = "images/freddie.png" alt = "Picture of Freddie">
+	</div>
+	<div id = "para-flex">
+		<p id = "intro-para"> "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+	</div>
 </div>
-	
-<script>
-	var picture = document.getElementById("freddie");
-  		window.addEventListener("load", function(event) {
-    picture.style.visibility = "visible";	
-  });
-</script>	
 	
 </body>
 </html>
