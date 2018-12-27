@@ -1,19 +1,27 @@
 <!doctype html>
 <html>
-<!-- Issue 1: image of me loads with no width - USE DOM .LOAD -->
-<!-- Issue 2: above a certain dimension (520x520, image increases in height but not width - FIXED -->
 <!-- Add landscape mode -->
 <head>
 	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
 	<title>index.html</title>
 	<style>
+		html,body {
+			margin: 0;
+			padding: 0;
+		}
+		:root {
+			--nav: #59022B;
+			--shadow1: #FF1986;
+			--shadow2: #00FF04;
+			--shadow3: #FF0078;
+		}
 		#blank {
-			height: 80px;
+			height: 90px;
 		}
 		.topnav {
 		  	overflow: hidden;
-			background-color: #59022B;
+			background-color: var(--nav);
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;
@@ -23,6 +31,7 @@
 			left: 0;
 			right: 0;
 			height: 80px;
+			z-index: 1;
 		}
 		.topnav a {	
 		  text-align: center;
@@ -52,22 +61,25 @@
 		}
 		#intro-flex {
 			display: flex;
-			justify-content: space-around;
 			font-size: 2vw;
 			overflow: hidden;
+			justify-content: space-around;
 		}
 		#freddie-flex {
 			padding: 10px 10px 10px 10px;
 			height: 20em;
 			width: 20em;
+			display: block;
 			max-width: 480px;
 			max-height: 480px;
 		}
 		#para-flex {
 			font-family: 'Major Mono Display', monospace;
+			display: block;
 			font-size: 1em;
 			padding: 10px;
 			margin: 0px;
+			width: auto;
 		}
 		#freddie {
 			height: 100%;
@@ -77,6 +89,70 @@
 			height: 100%;
 			width: auto;
 		}
+		#scaffold-flex {
+			width: 100vw;
+			padding: 0px;
+			margin: 0px;
+			
+		}
+		#scaffold {
+			width: 100%;
+			opacity: 0.4;
+		}
+		#quote-flex {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			
+		}
+		.text-box {
+			width: 50vw;
+    		border: 1.5px solid #cdcdcd;
+   			border-color: #000000;
+    		background-color: white;
+			margin: 100px 0px;
+			box-shadow: 4px 4px var(--shadow1);
+    		font-size: 2vw;
+			display: inline-block;
+			padding: 5px 0px 5px 20px;
+		}
+		#box {
+			opacity: 0;
+			transition: all 1.5s;
+		}
+		#box.active {
+			opacity: 1;
+		}
+		#box2 {
+			opacity: 0;
+			transition: all 1.5s;
+		}
+		#box2.active {
+			opacity: 1;
+		}
+		#box3 {
+			opacity: 0;
+			transition: all 1.5s;
+		}
+		#box3.active {
+			opacity: 1;
+		}
+		#box4 {
+			opacity: 0;
+			transition: all 1.5s;
+		}
+		#box4.active {
+			opacity: 1;
+		}
+		#box5 {
+			opacity: 0;
+			transition: all 1.5s;
+		}
+		#box5.active {
+			opacity: 1;
+		}
+		
 		
 		
 		@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -106,10 +182,15 @@
 			}
 		}
 	</style>
+	
+	
+	
 </head>
 
 <body>
-	<div id = "blank"> </div>
+	
+<div id = "blank"> </div>
+	
 <div class="topnav">
   <a href="#codewars"><img class = "nav-el" id = "codewars" src = "images/codewars.png" alt = "Codewars"></a>
   <a href="#codepen"><img class = "nav-el" id = "codepen" src = "images/codepen.png" alt = "Codepen"></a>
@@ -118,13 +199,115 @@
 </div>
 
 <div id = "intro-flex">
-	<div id = "freddie-flex" display = "block"> 
+	<div id = "freddie-flex"> 
 		<img id = "freddie" src = "images/freddie.png" alt = "Picture of Freddie">
 	</div>
-	<div id = "para-flex" display = "block">
+	<div id = "para-flex">
 		<p id = "intro-para"> "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
 	</div>
 </div>
+
+<div id = "quote-flex">
+	
+	<div id = "box">
+		<div class = "text-box">
+			<p> A child brought up in a working class family will hear 4 million fewer words by age 3 than a child brought up in a wealthy family. </p>
+		</div>
+	</div>
+	
+	<div id = "box2">
+		<div class = "text-box">
+			<p> Between the ages of 4 and 11, £50000 more is spent on a privately educated pupil than a state educated pupil. </p>
+		</div>
+	</div>
+	
+	<div id = "box3">
+		<div class = "text-box">
+			<p> A student on free school meals is 27% less likely to achieve five or more GCSEs at grades A* to C than the average student. </p>
+		</div>
+	</div>
+	
+	<div id = "box4">
+		<div class = "text-box">
+			<p> Private school students are 55 times more likely to win a place at Oxbridge than free school meal students. </p>
+		</div>
+	</div>
+	
+	<div id = "box5">
+		<div class = "text-box">
+			<p> A privately educated student is: 
+			<li> 4 times more likely to become an MP </li>
+			<li> 6 times more likely to become a high-paid BBC star </li>
+			<li> 8 times more likely to become a top doctor </li>
+			<li> 10 times more likely to become a senior judge </li>
+			</p>
+		</div>
+	</div>
+
+</div>
+	
+	
+	<div id = "scaffold-flex">
+		<img id = "scaffold" alt = "" src = "images/yale2.png">
+	</div>
 	
 </body>
+	
+<script>
+	
+	var box1 = document.getElementById("box");
+	var box2 = document.getElementById("box2");
+	var box3 = document.getElementById("box3");
+	var box4 = document.getElementById("box4");
+	var box5 = document.getElementById("box5");
+	
+	function boxscroll1 () {
+	  if (box1.getBoundingClientRect().top < 300) {
+		box1.className = "active"; 
+	  } else {
+		box1.className = "";
+	  }
+	};	
+		
+	function boxscroll2 () {
+	  if (box2.getBoundingClientRect().top < 300)  {
+		box2.className = "active"; 
+	  } else {
+		box2.className = "";
+	  }
+	};		
+		
+	function boxscroll3() {
+	  if (box3.getBoundingClientRect().top < 300) {
+		box3.className = "active"; 
+	  } else {
+		box3.className = "";
+	  }
+	};	
+		
+	function boxscroll4() {
+	  if (box4.getBoundingClientRect().top < 300) {
+		box4.className = "active"; 
+	  } else {
+		box4.className = "";
+	  }
+	};	
+		
+	function boxscroll5() {
+	  if (box5.getBoundingClientRect().top < 300) {
+		box5.className = "active"; 
+	  } else {
+		box5.className = "";
+	  }
+	};		
+		
+	window.addEventListener('scroll', boxscroll1);	
+	window.addEventListener('scroll', boxscroll2);
+	window.addEventListener('scroll', boxscroll3);
+	window.addEventListener('scroll', boxscroll4);
+	window.addEventListener('scroll', boxscroll5);
+		
+</script>
+	
+	
 </html>
