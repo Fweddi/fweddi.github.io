@@ -3,7 +3,8 @@
 <!-- Add landscape mode -->
 <head>
 	<meta charset="UTF-8">
-	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat|Staatliches" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<title>index.html</title>
 	<style>
 		html,body {
@@ -14,7 +15,7 @@
 			--nav: #59022B;
 			--shadow1: #FF1986;
 			--shadow2: #00FF04;
-			--shadow3: #FF0078;
+			--shadow3: #3914CC;
 		}
 		#blank {
 			height: 90px;
@@ -44,8 +45,8 @@
 			width: 50px;
 			height: 50px;
 		}
-		#github {
-			padding-right: 10px;
+		#codepen {
+			padding-right: 20px;
 		}
 		#codewars:hover {
 			content: url("images/codewars2.png");
@@ -61,12 +62,13 @@
 		}
 		#intro-flex {
 			display: flex;
-			font-size: 2vw;
+			font-size: 1.5vw;
+			font-family: 'Open Sans', sans-serif;
 			overflow: hidden;
 			justify-content: space-around;
 		}
 		#freddie-flex {
-			padding: 10px 10px 10px 10px;
+			padding: 20px;
 			height: 20em;
 			width: 20em;
 			display: block;
@@ -74,10 +76,9 @@
 			max-height: 480px;
 		}
 		#para-flex {
-			font-family: 'Major Mono Display', monospace;
 			display: block;
 			font-size: 1em;
-			padding: 10px;
+			padding: 20px;
 			margin: 0px;
 			width: auto;
 		}
@@ -89,33 +90,76 @@
 			height: 100%;
 			width: auto;
 		}
-		#scaffold-flex {
+		#line {
+			width: 80vw;
+			height: 1.5px;
+			background-color: var(--nav);
+			margin: auto;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		#system {
 			width: 100vw;
-			padding: 0px;
-			margin: 0px;
-			
+			font-size: 8vw;
+			margin-bottom: 5vh;
+			font-family: 'Major Mono Display', monospace;
+			text-align: center;
 		}
-		#scaffold {
-			width: 100%;
-			opacity: 0.4;
-		}
-		#quote-flex {
+		.quote-flex {
+			margin-top: 20px;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
 			align-items: center;
-			
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		#quote-flex1 {
+			background-image: url("images/barbican.png");
+		}
+		#quote-flex2 {
+			background-image: url("images/barrel.png");
+			margin-top: 0px;
+		}
+		#quote-flex3 {
+			background-image: url("images/vitruvian2.png");
+			margin-top: 0px;
 		}
 		.text-box {
 			width: 50vw;
     		border: 1.5px solid #cdcdcd;
    			border-color: #000000;
-    		background-color: white;
-			margin: 100px 0px;
+			background-color: white;
+			margin: 10vw 0px;
 			box-shadow: 4px 4px var(--shadow1);
-    		font-size: 2vw;
-			display: inline-block;
-			padding: 5px 0px 5px 20px;
+    		font-size: 1.8vw;
+			font-family: 'Montserrat', sans-serif;
+			display: relative;
+			padding: 5px 20px;
+		}
+		.text-box2 {
+			width: 50vw;
+    		border: 1.5px solid #cdcdcd;
+   			border-color: #000000;
+			background-color: white;
+			margin: 10vw 0px;
+			box-shadow: 4px 4px var(--shadow2);
+    		font-size: 1.8vw;
+			font-family: 'Montserrat', sans-serif;
+			display: relative;
+			padding: 5px 20px;
+		}
+		.text-box3 {
+			width: 50vw;
+    		border: 1.5px solid #cdcdcd;
+   			border-color: #000000;
+			background-color: white;
+			margin: 10vw 0px;
+			box-shadow: 4px 4px var(--shadow3);
+    		font-size: 1.8vw;
+			font-family: 'Montserrat', sans-serif;
+			display: relative;
+			padding: 5px 20px;
 		}
 		#box {
 			opacity: 0;
@@ -152,6 +196,99 @@
 		#box5.active {
 			opacity: 1;
 		}
+		#box6 {
+			opacity: 0;
+			transition: all 1.5s;
+		}
+		#box6.active {
+			opacity: 1;
+		}
+		#box7 {
+			opacity: 0;
+			transition: all 1.5s;
+		}
+		#box7.active {
+			opacity: 1;
+		}
+		#box8 {
+			opacity: 0;
+			transition: all 1.5s;
+		}
+		#box8.active {
+			opacity: 1;
+		}
+		#box9 {
+			opacity: 0;
+			transition: all 1.5s;
+		}
+		#box9.active {
+			opacity: 1;
+		}
+		#box10 {
+			opacity: 0;
+			transition: all 1.5s;
+		}
+		#box10.active {
+			opacity: 1;
+		}
+		#box11 {
+			opacity: 0;
+			transition: all 1.5s;
+		}
+		#box11.active {
+			opacity: 1;
+		}
+		#box12 {
+			opacity: 0;
+			transition: all 1.5s;
+		}
+		#box12.active {
+			opacity: 1;
+		}
+		#box13 {
+			opacity: 0;
+			transition: all 1.5s;
+		}
+		#box13.active {
+			opacity: 1;
+		}
+		#box14 {
+			opacity: 0;
+			transition: all 1.5s;
+		}
+		#box14.active {
+			opacity: 1;
+		}
+		#box15 {
+			opacity: 0;
+			transition: all 1.5s;
+		}
+		#box15.active {
+			opacity: 1;
+		}
+		.container {
+			padding: 10vw 3vw;
+			
+			border-width: 4px 0px;
+			border-color: var(--nav);
+			border-style: solid;
+		}
+		.bigquote {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.9vw;
+			text-align: left;
+		}
+		.bigname {
+			font-family: 'Major Mono Display', monospace;
+			text-align: left;
+			font-size: 3vw;
+		}
+		#footer {
+			width: 100vw;
+			height: 80px;
+			overflow: hidden;
+			background-color: var(--nav);
+		}
 		
 		
 		
@@ -180,6 +317,8 @@
 				font-size: 2.5em;
 				padding: 0px;
 			}
+			
+			
 		}
 	</style>
 	
@@ -192,10 +331,12 @@
 <div id = "blank"> </div>
 	
 <div class="topnav">
-  <a href="#codewars"><img class = "nav-el" id = "codewars" src = "images/codewars.png" alt = "Codewars"></a>
-  <a href="#codepen"><img class = "nav-el" id = "codepen" src = "images/codepen.png" alt = "Codepen"></a>
-	<a href="#fcc"><img id = "fcc" class = "nav-el" src = "images/freecodecamp.png" alt = "FreeCodeCamp"></a>
-	<a href="#github"><img id = "github" class = "nav-el" src = "images/github.png" alt = "GitHub"></a>
+	
+<a href="https://www.freecodecamp.org/fweddi"><img id = "fcc" class = "nav-el" src = "images/freecodecamp.png" alt = "FreeCodeCamp"></a>
+<a href="https://www.codewars.com/users/Fweddi"><img class = "nav-el" id = "codewars" src = "images/codewars.png" alt = "Codewars"></a>
+<a href="https://github.com/Fweddi/fweddi.github.io"><img id = "github" class = "nav-el" src = "images/github.png" alt = "GitHub"></a>
+<a href="#codepen"><img class = "nav-el" id = "codepen" src = "images/codepen.png" alt = "Codepen"></a>
+	
 </div>
 
 <div id = "intro-flex">
@@ -203,53 +344,168 @@
 		<img id = "freddie" src = "images/freddie.png" alt = "Picture of Freddie">
 	</div>
 	<div id = "para-flex">
-		<p id = "intro-para"> "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+	  <p id="intro-para"> Hi, I’m Freddie! I’m looking to get onto a coding bootcamp because I see my future in tech, and I want to get onto the job market in London. And I want to apply here because I feel that Founders and Coders is the future of learning: peer-led, democratic and all about community. <br><br> And for me, the biggest strength of Founders and Coders is the diversity of that community. Sadly, systemic discrimination affects all walks of life, and the tech world in particular. By this I mean repeated acts of discrimination, intentional or not, against certain identities (such as race, class and gender), throughout institutions and society as a whole. This is compounded by the effects of socioeconomic inequality. <br><br>All too often these acts of discrimination go unnoticed, unable to be pinned down. I wanted to write a webpage that visualises the system to underline just how important the work that Founders and Coders is doing is.
+		  
+</p>
 	</div>
 </div>
+	
+<div id = "line"></div>
 
-<div id = "quote-flex">
 	
-	<div id = "box">
-		<div class = "text-box">
-			<p> A child brought up in a working class family will hear 4 million fewer words by age 3 than a child brought up in a wealthy family. </p>
+<div id = "system">The System</div>
+
+	<div class = "quote-flex" id = "quote-flex1">
+
+		<div id = "box">
+			<div class = "text-box">
+				<p> A child brought up in a working class family will hear 4 million fewer words by age 3 than a child brought up in a wealthy family. </p>
+			</div>
+		</div>
+
+		<div id = "box2">
+			<div class = "text-box">
+				<p> Between the ages of 4 and 11, £50,000 more is spent on a privately educated pupil than a state educated pupil. </p>
+			</div>
+		</div>
+
+		<div id = "box3">
+			<div class = "text-box">
+				<p> A student on free school meals is 27% less likely to achieve five or more GCSEs at grades A* to C than the average student. </p>
+			</div>
+		</div>
+
+		<div id = "box4">
+			<div class = "text-box">
+				<p> Private school students are 55 times more likely to win a place at Oxbridge than free school meal students. </p>
+			</div>
+		</div>
+
+		<div id = "box5">
+			<div class = "text-box">
+				<p> A privately educated student is: 
+				<li> 4 times more likely to become an MP </li>
+				<li> 6 times more likely to become a high-paid BBC star </li>
+				<li> 8 times more likely to become a top doctor </li>
+				<li> 10 times more likely to become a senior judge </li>
+				</p>
+			</div>
+		</div>
+
+	</div>
+
+<div class = "container">
+
+<div class = "bigquote"> <i>“Existing race inequalities are compounded rather than erased by class inequalities”</i><br></div>
+<div class = "bigname"> – Reni Eddo-Lodge </div>
+
+</div>
+	
+<div class = "quote-flex" id = "quote-flex2">
+	
+	<div id = "box6">
+		<div class = "text-box2">
+			<p>
+			A black schoolboy in England is around three times more likely to be permanently excluded compared to the whole school population.
+			</p>
 		</div>
 	</div>
 	
-	<div id = "box2">
-		<div class = "text-box">
-			<p> Between the ages of 4 and 11, £50000 more is spent on a privately educated pupil than a state educated pupil. </p>
+	<div id = "box7">
+		<div class = "text-box2">
+			<p>
+			At the age of eleven, when he is preparing to take his SATs, research indicates that he will be systematically marked down by his own teachers. 
+			</p>
 		</div>
 	</div>
 	
-	<div id = "box3">
-		<div class = "text-box">
-			<p> A student on free school meals is 27% less likely to achieve five or more GCSEs at grades A* to C than the average student. </p>
+	<div id = "box8">
+		<div class = "text-box2">
+			<p>
+			72% of white students who enter university with three 'B' grade A-levels attain a 2.1 degree or above, compared to 53% of black students.
+			</p>
 		</div>
 	</div>
 	
-	<div id = "box4">
-		<div class = "text-box">
-			<p> Private school students are 55 times more likely to win a place at Oxbridge than free school meal students. </p>
+	<div id = "box9">
+		<div class = "text-box2">
+			<p>
+			Almost 70 per cent of the professors teaching in British universities are white men.
+			</p>
 		</div>
 	</div>
 	
-	<div id = "box5">
-		<div class = "text-box">
-			<p> A privately educated student is: 
-			<li> 4 times more likely to become an MP </li>
-			<li> 6 times more likely to become a high-paid BBC star </li>
-			<li> 8 times more likely to become a top doctor </li>
-			<li> 10 times more likely to become a senior judge </li>
+	<div id = "box10">
+		<div class = "text-box2">
+			<p>
+			Applicants with white-sounding names are called to interview far more often that those with African- or Asian- sounding names.
 			</p>
 		</div>
 	</div>
 
 </div>
 	
+<div class = "container">
+
+	<div class = "bigquote"> <i>“It’s always a boy – there’s little to no research in this area focused on the life chances of black girls” </i><br></div>
+	<div class = "bigname"> – Reni Eddo-Lodge </div>
+
+</div>
 	
-	<div id = "scaffold-flex">
-		<img id = "scaffold" alt = "" src = "images/yale2.png">
+<div class = "quote-flex" id = "quote-flex3">
+	
+	<div id = "box11">
+		<div class = "text-box3">
+			<p>
+			Among those who have achieved grade A or A* in GCSE physics, just 13% of girls take physics at A-level, compared to 39% of boys.
+			</p>
+		</div>
 	</div>
+	
+	<div id = "box12">
+		<div class = "text-box3">
+			<p>
+			But girls are almost two and half times more likely to take physics at A-level if they are at a single-sex school.
+			</p>
+		</div>
+	</div>
+	
+	<div id = "box13">
+		<div class = "text-box3">
+			<p>
+			90% of engineering and physical sciences funding in UK goes to male-led projects.
+			</p>
+		</div>
+	</div>
+	
+	<div id = "box14">
+		<div class = "text-box3">
+			<p>
+			Up to 30,000 women are sacked each year simply for being pregnant. Each year an estimated 440,000 women lose out on pay or promotion as a result of pregnancy.
+			</p>
+		</div>
+	</div>
+	
+	<div id = "box15">
+		<div class = "text-box3">
+			<p>
+			At the current rate of progress, it will take 280 years to close the gender gap in computer science.
+			</p>
+		</div>
+	</div>
+	
+</div>
+	
+<div class = "container">
+
+	<div class = "bigquote"> <i>“It is shameful that there are so few women in science...There is a misconception in America that women scientists are all dowdy spinsters. This is the fault of men.” </i><br></div>
+	<div class = "bigname"> – Chien-Shiung Wu </div>
+
+</div>
+	
+<div id = "footer"></div>
+	
+
 	
 </body>
 	
@@ -260,9 +516,19 @@
 	var box3 = document.getElementById("box3");
 	var box4 = document.getElementById("box4");
 	var box5 = document.getElementById("box5");
+	var box6 = document.getElementById("box6");
+	var box7 = document.getElementById("box7");
+	var box8 = document.getElementById("box8");
+	var box9 = document.getElementById("box9");
+	var box10 = document.getElementById("box10");
+	var box11 = document.getElementById("box11");
+	var box12 = document.getElementById("box12");
+	var box13 = document.getElementById("box13");
+	var box14 = document.getElementById("box14");
+	var box15 = document.getElementById("box15");
 	
 	function boxscroll1 () {
-	  if (box1.getBoundingClientRect().top < 300) {
+	  if (box1.getBoundingClientRect().top < 350) {
 		box1.className = "active"; 
 	  } else {
 		box1.className = "";
@@ -270,7 +536,7 @@
 	};	
 		
 	function boxscroll2 () {
-	  if (box2.getBoundingClientRect().top < 300)  {
+	  if (box2.getBoundingClientRect().top < 350)  {
 		box2.className = "active"; 
 	  } else {
 		box2.className = "";
@@ -278,7 +544,7 @@
 	};		
 		
 	function boxscroll3() {
-	  if (box3.getBoundingClientRect().top < 300) {
+	  if (box3.getBoundingClientRect().top < 350) {
 		box3.className = "active"; 
 	  } else {
 		box3.className = "";
@@ -286,7 +552,7 @@
 	};	
 		
 	function boxscroll4() {
-	  if (box4.getBoundingClientRect().top < 300) {
+	  if (box4.getBoundingClientRect().top < 350) {
 		box4.className = "active"; 
 	  } else {
 		box4.className = "";
@@ -294,18 +560,109 @@
 	};	
 		
 	function boxscroll5() {
-	  if (box5.getBoundingClientRect().top < 300) {
+	  if (box5.getBoundingClientRect().top < 350) {
 		box5.className = "active"; 
 	  } else {
 		box5.className = "";
 	  }
-	};		
+	};
+	
+	function boxscroll6 () {
+	  if (box6.getBoundingClientRect().top < 350) {
+		box6.className = "active"; 
+	  } else {
+		box6.className = "";
+	  }
+	};
+	
+	function boxscroll7 () {
+	  if (box7.getBoundingClientRect().top < 350) {
+		box7.className = "active"; 
+	  } else {
+		box7.className = "";
+	  }
+	};
+	
+	function boxscroll8 () {
+	  if (box8.getBoundingClientRect().top < 350) {
+		box8.className = "active"; 
+	  } else {
+		box8.className = "";
+	  }
+	};
+	
+	function boxscroll9 () {
+	  if (box9.getBoundingClientRect().top < 350) {
+		box9.className = "active"; 
+	  } else {
+		box9.className = "";
+	  }
+	};
+	
+	function boxscroll10 () {
+	  if (box10.getBoundingClientRect().top < 350) {
+		box10.className = "active"; 
+	  } else {
+		box10.className = "";
+	  }
+	};
+	
+	function boxscroll11 () {
+	  if (box11.getBoundingClientRect().top < 350) {
+		box11.className = "active"; 
+	  } else {
+		box11.className = "";
+	  }
+	};
+	
+	function boxscroll12 () {
+	  if (box12.getBoundingClientRect().top < 350) {
+		box12.className = "active"; 
+	  } else {
+		box12.className = "";
+	  }
+	};
+	
+	function boxscroll13 () {
+	  if (box13.getBoundingClientRect().top < 350) {
+		box13.className = "active"; 
+	  } else {
+		box13.className = "";
+	  }
+	};
+	
+	function boxscroll14 () {
+	  if (box14.getBoundingClientRect().top < 350) {
+		box14.className = "active"; 
+	  } else {
+		box14.className = "";
+	  }
+	};
+	
+	function boxscroll15 () {
+	  if (box15.getBoundingClientRect().top < 350) {
+		box15.className = "active"; 
+	  } else {
+		box15.className = "";
+	  }
+	};	
+	
 		
 	window.addEventListener('scroll', boxscroll1);	
 	window.addEventListener('scroll', boxscroll2);
 	window.addEventListener('scroll', boxscroll3);
 	window.addEventListener('scroll', boxscroll4);
 	window.addEventListener('scroll', boxscroll5);
+	window.addEventListener('scroll', boxscroll6);
+	window.addEventListener('scroll', boxscroll7);
+	window.addEventListener('scroll', boxscroll8);
+	window.addEventListener('scroll', boxscroll9);
+	window.addEventListener('scroll', boxscroll10);
+	window.addEventListener('scroll', boxscroll11);
+	window.addEventListener('scroll', boxscroll12);
+	window.addEventListener('scroll', boxscroll13);
+	window.addEventListener('scroll', boxscroll14);
+	window.addEventListener('scroll', boxscroll15);
 		
 </script>
 	
