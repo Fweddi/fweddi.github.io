@@ -66,9 +66,10 @@
 			font-family: 'Open Sans', sans-serif;
 			overflow: hidden;
 			justify-content: space-around;
+			align-items: center;
 		}
 		#freddie-flex {
-			padding: 20px;
+			padding: 1.4vh 1.4vh 1.4vh 2.8vh;
 			height: 20em;
 			width: 20em;
 			display: block;
@@ -78,7 +79,7 @@
 		#para-flex {
 			display: block;
 			font-size: 1em;
-			padding: 20px;
+			padding: 1.4vh 2.8vh 1.4vh 1.4vh;
 			margin: 0px;
 			width: auto;
 		}
@@ -396,13 +397,12 @@
 			width: 100vw;
 			margin-bottom: 0vh;
 			}
-			#box1 {
-			margin: 0;
-			padding: 0;
+			.quote-flex {
+			margin-top: 0px;
 			}
 		}
 		
-		@media only screen and (orientation: landscape) {
+		@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation: landscape) {
 		.nav-el {
 			width: 10vh;
 			height: 10vh;
@@ -414,7 +414,7 @@
 			font-size: 2vw;
 		}
 		#intro-flex {
-			flex-wrap: no-wrap;
+			flex-wrap: nowrap;
 		}
 		}
 	</style>
